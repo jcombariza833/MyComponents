@@ -8,10 +8,17 @@
 import SwiftUI
 
 public struct GLink: View {
-    public var labelText: String
-    public var activeColor: Color? = nil
-    public var inactiveColor: Color? = nil
-    public var action: (() -> ())
+    var labelText: String
+    var activeColor: Color? = nil
+    var inactiveColor: Color? = nil
+    var action: (() -> ())
+    
+    public init(labelText: String,activeColor: Color? = nil,inactiveColor: Color? = nil, action: @escaping (() -> ()) ) {
+        self.labelText = labelText
+        self.activeColor = activeColor
+        self.inactiveColor = inactiveColor
+        self.action = action
+    }
     
     @GestureState private var isPress = false
     

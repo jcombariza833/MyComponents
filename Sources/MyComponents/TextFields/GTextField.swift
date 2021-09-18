@@ -17,6 +17,17 @@ public struct GTextField: View {
     var color: Color? = nil
     var helperColor: Color? = nil
     
+    public init(text: Binding<String>, labelText: String, leadingIcon: String? = nil, trailingIcon: String? = nil, helperText: String? = nil, trailingIconAction: (() -> ())? = nil, color: Color? = nil, helperColor: Color? = nil) {
+        self._text = text
+        self.labelText = labelText
+        self.leadingIcon = leadingIcon
+        self.trailingIcon = trailingIcon
+        self.helperText = helperText
+        self.trailingIconAction = trailingIconAction
+        self.color = color
+        self.helperColor = helperColor
+    }
+    
     @State private var isEditing = false
     
     public var body: some View {

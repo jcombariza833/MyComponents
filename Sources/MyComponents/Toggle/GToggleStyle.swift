@@ -14,6 +14,13 @@ public struct GToggleStyle: ToggleStyle {
     var colorOff: Color? = nil
     var iconOff: String? = nil
     
+    public init(colorOn: Color? = nil, iconOn: String? = nil, colorOff: Color? = nil, iconOff: String? = nil) {
+        self.colorOn = colorOn
+        self.iconOn = iconOn
+        self.colorOff = colorOff
+        self.iconOff = iconOff
+    }
+    
     public func makeBody(configuration: Configuration) -> some View {
         HStack {
             configuration.label

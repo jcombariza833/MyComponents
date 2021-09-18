@@ -18,6 +18,17 @@ public struct SnackBarPopUp: ViewModifier {
     var buttonColor: Color?
     var action: (() -> ())?
     
+    public init(isPresented: Binding<Bool>, labelText: String, leadingIcon: String?, textColor: Color?, color: Color?, buttonText: String?, buttonColor: Color?, action: (() -> ())?) {
+        self._isPresented = isPresented
+        self.labelText = labelText
+        self.leadingIcon = leadingIcon
+        self.textColor = textColor
+        self.color = color
+        self.buttonText = buttonText
+        self.buttonColor = buttonColor
+        self.action = action
+    }
+    
     var dismiss = Dissmiser()
     
     @State private var snackbarSize: CGSize = .zero

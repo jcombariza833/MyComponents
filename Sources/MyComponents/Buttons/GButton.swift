@@ -15,6 +15,15 @@ public struct GButton: View {
     var color: Color? = nil
     var fullWidth: Bool? = nil
     var action: (() -> ())
+    
+    public init(labelText: String, leadingIcon: String? = nil, textColor: Color? = nil, color: Color? = nil, fullWidth: Bool? = nil, action: @escaping (() -> ()) ) {
+        self.labelText = labelText
+        self.leadingIcon = leadingIcon
+        self.textColor = textColor
+        self.color = color
+        self.fullWidth = fullWidth
+        self.action = action
+    }
 
     public var body: some View {
         Button(action: {

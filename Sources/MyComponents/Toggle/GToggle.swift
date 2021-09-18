@@ -15,7 +15,7 @@ public struct GToggle<Label> : View where Label : View{
     @Binding private var isOn: Bool
     private var label: () -> Label
     
-    init(colorOn: Color? = nil, iconOn: String? = nil,colorOff: Color? = nil, iconOff: String? = nil, isOn: Binding<Bool>, @ViewBuilder label: @escaping () -> Label) {
+    public init(colorOn: Color? = nil, iconOn: String? = nil,colorOff: Color? = nil, iconOff: String? = nil, isOn: Binding<Bool>, @ViewBuilder label: @escaping () -> Label) {
         self.colorOn = colorOn
         self.iconOn = iconOn
         self.colorOff = colorOff

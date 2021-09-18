@@ -13,6 +13,13 @@ public struct GBorderButton: View {
     var color: Color? = nil
     var action: (() -> ())
     
+    public init(labelText: String, leadingIcon: String? = nil, color: Color? = nil, action: @escaping (() -> ())) {
+        self.labelText = labelText
+        self.leadingIcon = leadingIcon
+        self.color = color
+        self.action = action
+    }
+    
     public var body: some View {
         Button(action: {
             action()

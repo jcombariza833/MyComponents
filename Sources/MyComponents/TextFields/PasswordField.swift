@@ -16,6 +16,12 @@ public struct PasswordField: View {
     var helperText: String? = nil
     var color: Color? = nil
     
+    public init (text: Binding<String>, helperText: String? = nil, color: Color? = nil) {
+        self._text = text
+        self.helperText = helperText
+        self.color = color
+    }
+    
     @State private var isEditing = false
     @State private var showPassword = false
     

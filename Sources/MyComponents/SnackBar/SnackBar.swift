@@ -15,6 +15,16 @@ public struct SnackBar: View {
     var buttonText: String? = nil
     var buttonColor: Color? = nil
     var action: (() -> ())? = nil
+    
+    public init(labelText: String, leadingIcon: String? = nil, textColor: Color? = nil, color: Color? = nil, buttonText: String? = nil, buttonColor: Color? = nil, action: (() -> ())? = nil) {
+        self.labelText = labelText
+        self.leadingIcon = leadingIcon
+        self.textColor = textColor
+        self.color = color
+        self.buttonText = buttonText
+        self.buttonColor = buttonColor
+        self.action = action
+    }
 
     @State private var longButton = false
     

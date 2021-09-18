@@ -14,6 +14,12 @@ public struct EmailField: View {
     private let trailingIcon = "clear"
     var helperText: String? = nil
     var color: Color? = nil
+    
+    public init(text: Binding<String>, helperText: String? = nil, color: Color? = nil) {
+        self._text = text
+        self.helperText = helperText
+        self.color = color
+    }
 
     @State private var isEditing = false
     
