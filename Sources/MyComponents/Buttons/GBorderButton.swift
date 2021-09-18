@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct GBorderButton: View {
+public struct GBorderButton: View {
     var labelText: String
     var leadingIcon: String? = nil
     var color: Color? = nil
     var action: (() -> ())
     
-    var body: some View {
+    public var body: some View {
         Button(action: {
             action()
         }) {

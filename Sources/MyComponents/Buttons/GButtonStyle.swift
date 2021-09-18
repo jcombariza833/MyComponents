@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct GButtonStyle: ButtonStyle {
+public struct GButtonStyle: ButtonStyle {
     var color: Color? = nil
-    func makeBody(configuration: Self.Configuration) -> some View {
+    public func makeBody(configuration: Self.Configuration) -> some View {
 
         configuration.label
             .frame(height: 36, alignment: .center)

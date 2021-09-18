@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SnackBar: View {
+public struct SnackBar: View {
     var labelText: String
     var leadingIcon: String? = nil
     var textColor: Color? = nil
@@ -18,7 +18,7 @@ struct SnackBar: View {
 
     @State private var longButton = false
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .trailing) {
             HStack {
                 if let leadingIcon =  leadingIcon {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PasswordField: View {
+public struct PasswordField: View {
     @Binding var text: String
     
     private let labelText = "Password"
@@ -19,7 +19,7 @@ struct PasswordField: View {
     @State private var isEditing = false
     @State private var showPassword = false
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment:.center) {
             ZStack(alignment:.leading) {
                 HStack {

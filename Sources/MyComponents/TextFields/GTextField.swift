@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GTextField: View {
+public struct GTextField: View {
     @Binding var text: String
     var labelText: String
     var leadingIcon: String? = nil
@@ -19,7 +19,7 @@ struct GTextField: View {
     
     @State private var isEditing = false
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment:.center) {
             ZStack(alignment:.leading) {
                 HStack {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GButton: View {
+public struct GButton: View {
     
     var labelText: String
     var leadingIcon: String? = nil
@@ -16,7 +16,7 @@ struct GButton: View {
     var fullWidth: Bool? = nil
     var action: (() -> ())
 
-    var body: some View {
+    public var body: some View {
         Button(action: {
             action()
         }) {

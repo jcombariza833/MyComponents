@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct GToggleStyle: ToggleStyle {
+public struct GToggleStyle: ToggleStyle {
     var colorOn: Color? = nil
     var iconOn: String? = nil
     var colorOff: Color? = nil
     var iconOff: String? = nil
     
-    func makeBody(configuration: Configuration) -> some View {
+    public func makeBody(configuration: Configuration) -> some View {
         HStack {
             configuration.label
             Spacer()

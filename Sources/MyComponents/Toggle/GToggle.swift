@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GToggle<Label> : View where Label : View{
+public struct GToggle<Label> : View where Label : View{
     private var colorOn: Color? = nil
     private var iconOn: String? = nil
     private var colorOff: Color? = nil
@@ -24,7 +24,7 @@ struct GToggle<Label> : View where Label : View{
         self.label = label
     }
     
-    var body: some View {
+    public var body: some View {
         Toggle(isOn: $isOn, label: self.label)
             .toggleStyle(GToggleStyle(colorOn: colorOn,
                                       iconOn: iconOn,

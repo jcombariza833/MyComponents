@@ -8,10 +8,10 @@
 import Foundation
 import SwiftUI
 
-struct GBorderButtonStyle: ButtonStyle {
+public struct GBorderButtonStyle: ButtonStyle {
     var color: Color? = nil
     
-    func makeBody(configuration: Self.Configuration) -> some View {
+    public func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(height: 36, alignment: .center)
             .padding(.horizontal, 16)

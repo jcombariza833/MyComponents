@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GLink: View {
+public struct GLink: View {
     var labelText: String
     var activeColor: Color? = nil
     var inactiveColor: Color? = nil
@@ -15,7 +15,7 @@ struct GLink: View {
     
     @GestureState private var isPress = false
     
-    var body: some View {
+    public var body: some View {
         Text(labelText)
             .bold()
             .font(.system(size: 14))

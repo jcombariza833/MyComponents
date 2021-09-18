@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct TTSecureField: View {
+public struct TTSecureField: View {
     var placeholder: String
     @Binding var text: String
     var isValid: Bool
     
     @State private var showPassword: Bool = false
     
-    var body: some View {
+    public var body: some View {
         ZStack(alignment: .leading) {
             if showPassword {
                 TextField("", text: self.$text)

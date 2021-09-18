@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct SnackBarPopUp: ViewModifier {
+public struct SnackBarPopUp: ViewModifier {
     @Binding var isPresented: Bool
     var labelText: String
     var leadingIcon: String?
@@ -24,7 +24,7 @@ struct SnackBarPopUp: ViewModifier {
     @State private var contentSize: CGSize = .zero
     @State private var contentSafeSize: EdgeInsets = EdgeInsets()
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         dismiss.work?.cancel()
         dismiss.work = DispatchWorkItem(block: {
             withAnimation(.easeInOut(duration: 0.4)) {

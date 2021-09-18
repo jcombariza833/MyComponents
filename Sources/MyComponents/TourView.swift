@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct TourView: View {
+public struct TourView: View {
     let colors: [Color] = [
             .red, .green, .blue, .gray
         ]
-    var body: some View {
+    public var body: some View {
         GeometryReader { proxy in
             TabView {
                 ForEach(colors, id: \.self) { color in

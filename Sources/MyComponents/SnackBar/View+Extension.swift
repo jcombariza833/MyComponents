@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 extension View {
-    func snackBarPopUp(isPresented: Binding<Bool>,
+    public func snackBarPopUp(isPresented: Binding<Bool>,
                        labelText: String,
                        leadingIcon: String? = nil,
                        textColor: Color? = nil,

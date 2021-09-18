@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmailField: View {
+public struct EmailField: View {
     @Binding var text: String
     private let labelText = "Email"
     private let leadingIcon = "envelope"
@@ -17,7 +17,7 @@ struct EmailField: View {
 
     @State private var isEditing = false
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment:.center) {
             ZStack(alignment:.leading) {
                 HStack {
